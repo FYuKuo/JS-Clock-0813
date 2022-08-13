@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="./css.css">
+</head>
+<body>
+    <div class="content">
+        <div class="clock">
+            <div class="hour hour12">
+                <img src="./img/12.png" alt="">
+            </div>
+            <div class="hour hour1">
+                <img src="./img/1.png" alt="">
+            </div>
+            <div class="hour hour2">
+                <img src="./img/2.png" alt="">
+            </div>
+            <div class="hour hour3">
+                <img src="./img/3.png" alt="">
+            </div>
+            <div class="hour hour4">
+                <img src="./img/4.png" alt="">
+            </div>
+            <div class="hour hour5">
+                <img src="./img/5.png" alt="">
+            </div>
+            <div class="hour hour6">
+                <img src="./img/6.png" alt="">
+            </div>
+            <div class="hour hour7">
+                <img src="./img/7.png" alt="">
+            </div>
+            <div class="hour hour8">
+                <img src="./img/8.png" alt="">
+            </div>
+            <div class="hour hour9">
+                <img src="./img/9.png" alt="">
+            </div>
+            <div class="hour hour10">
+                <img src="./img/10.png" alt="">
+            </div>
+            <div class="hour hour11">
+                <img src="./img/11.png" alt="">
+            </div>
+
+            <div class="hourHand">
+                
+            </div>
+            <div class="minuteHand">
+                
+            </div>
+            <div class="secondHand">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script>
+
+        let secondHand = $('.hourHand');
+        let minHand = $('.minuteHand');
+        let hourHand = $('.secondHand');
+
+        let now = new Date();
+        let seconds = now.getSeconds();
+        let mins = now.getMinutes();
+        let hours = now.getHours();
+
+        let secondsDegress = ((seconds / 60) * 360)
+        let minsDegress  = ((mins / 60) * 360)
+        let hoursDegress  = ((hours / 12) * 360)
+    </script>
+</body>
+</html>
