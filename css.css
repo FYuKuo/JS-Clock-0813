@@ -95,14 +95,13 @@ body {
 .hourHand {
     position: absolute;
     border-style: solid;
-    border-color: transparent transparent rgb(255, 183, 164) transparent;
+    border-color: transparent transparent rgb(241, 186, 84) transparent;
     border-width: 0 8px 160px 8px;
     width: 0;
     height: 0;
-    top:24%;
+    top:35%;
     left: 50%;
-    transform: translate(-50%, 0);
-
+    transform-origin:8px 165px;
 }
 
 .hourHand::before {
@@ -112,20 +111,21 @@ body {
     height: 0;
     border-style: solid;
     border-width: 15px 8px 0 8px;
-    border-color: rgb(255, 183, 164) transparent transparent transparent;
+    border-color: rgb(241, 186, 84) transparent transparent transparent;
     transform: translate(-50%, 160px);
 }
 
 .minuteHand {
     position: absolute;
     border-style: solid;
-    border-color: transparent transparent rgb(160, 123, 113) transparent;
+    border-color: transparent transparent rgb(255, 205, 139) transparent;
     border-width: 0 8px 200px 8px;
     width: 0;
     height: 0;
-    top:18%;
+    top:34%;
     left: 50%;
     transform: translate(-50%, 0);
+    transform-origin:50% 195px;
     
 }
 
@@ -136,7 +136,7 @@ body {
     height: 0;
     border-style: solid;
     border-width: 15px 8px 0 8px;
-    border-color: rgb(160, 123, 113) transparent transparent transparent;
+    border-color: rgb(255, 205, 139) transparent transparent transparent;
     transform: translate(-50%, 200px);
 }
 
@@ -144,12 +144,12 @@ body {
     position: absolute;
     border-style: solid;
     border-color: transparent transparent rgb(253, 231, 172) transparent;
-    border-width: 0 5px 250px 5px;
+    border-width: 0 5px 300px 5px;
     width: 0;
     height: 0;
-    top:10%;
+    top:32%;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform-origin:50% 260px;
 
 }
 
@@ -161,7 +161,7 @@ body {
     border-style: solid;
     border-width: 50px 5px 0 5px;
     border-color: rgb(253, 231, 172) transparent transparent transparent;
-    transform: translate(-50%, 250px);
+    transform: translate(-50%, 300px);
 }
 
 .clock::after {

@@ -47,10 +47,10 @@
                 <img src="./img/11.png" alt="">
             </div>
 
-            <div class="hourHand">
+            <div class="minuteHand">
                 
             </div>
-            <div class="minuteHand">
+            <div class="hourHand">
                 
             </div>
             <div class="secondHand">
@@ -62,18 +62,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
     <script>
 
-        let secondHand = $('.hourHand');
-        let minHand = $('.minuteHand');
-        let hourHand = $('.secondHand');
+        function setTime(){
 
-        let now = new Date();
-        let seconds = now.getSeconds();
-        let mins = now.getMinutes();
-        let hours = now.getHours();
+            let hourHand = $('.hourHand');
+            let minHand = $('.minuteHand');
+            let secondHand = $('.secondHand');
+    
+            let now = new Date();
+            let seconds = now.getSeconds();
+            let mins = now.getMinutes();
+            let hours = now.getHours();
+    
+            let secondsDegress = ((seconds / 60) * 360)
+            let minsDegress  = ((mins / 60) * 360)
+            let hoursDegress  = ((hours / 12) * 360)
+    
+            hourHand.css('transform',`translate(-50%, -50%) rotate(${hoursDegress}deg)`);
+            minHand.css('transform',`translate(-50%, -50%)  rotate(${minsDegress}deg)`);
+            secondHand.css('transform',`translate(-50%, -50%) rotate(${secondsDegress}deg)`);
+        }
 
-        let secondsDegress = ((seconds / 60) * 360)
-        let minsDegress  = ((mins / 60) * 360)
-        let hoursDegress  = ((hours / 12) * 360)
+        setInterval(setTime,1000);
+
+        
     </script>
 </body>
 </html>
